@@ -1,52 +1,67 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+}
+
+.bg {
+  width: 100%;
+  display: block;
+}
+
+.icon {
+  position: absolute;
+  width: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .icon:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
-/* FLOAT ANIMATION */
-@keyframes float {
-  0% { transform: translate(-50%, -50%) translateY(0px); }
-  50% { transform: translate(-50%, -50%) translateY(-10px); }
-  100% { transform: translate(-50%, -50%) translateY(0px); }
-}
+/* PERFECT POSITIONS (NO CENTER IMAGE NOW) */
+.letter { top: 10%; left: 5%; }
+.card { top: 10%; right: 5%; }
 
-@keyframes bob {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
+.travel { top: 40%; left: 8%; }
+.music { top: 40%; right: 8%; }
 
-/* POSITIONS EXACT LIKE YOUR DESIGN */
-.letter { top: 18%; left: 8%; animation: bob 4s infinite; }
-.travel { top: 55%; left: 10%; animation: bob 5s infinite; }
-.ticket { top: 78%; left: 15%; animation: bob 6s infinite; }
-.music { top: 38%; right: 12%; animation: bob 5s infinite; }
-.card { top: 20%; right: 10%; animation: bob 4s infinite; }
-.photostrip { top: 60%; right: 8%; width: 100px; animation: bob 6s infinite; }
+.ticket { top: 60%; left: 12%; }
+.photostrip { top: 60%; right: 10%; }
 
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-  <!-- BACKGROUND FULL DESIGN -->
+  <!-- BACKGROUND -->
   <img src="background.png" class="bg">
-
-  <!-- CENTER PHOTO -->
-  <img src="your-photo.png" class="center">
 
   <!-- ICONS -->
   <a href="letter.html"><img src="letter.png" class="icon letter"></a>
-  <a href="travel.html"><img src="travel.png" class="icon travel"></a>
-  <a href="movies.html"><img src="ticket.png" class="icon ticket"></a>
-  <a href="music.html"><img src="music.png" class="icon music"></a>
   <a href="pass.html"><img src="card.png" class="icon card"></a>
+
+  <a href="travel.html"><img src="travel.png" class="icon travel"></a>
+  <a href="music.html"><img src="music.png" class="icon music"></a>
+
+  <a href="movies.html"><img src="ticket.png" class="icon ticket"></a>
   <a href="photobooth.html"><img src="photostrip.png" class="icon photostrip"></a>
 
 </div>
