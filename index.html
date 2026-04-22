@@ -8,27 +8,29 @@
 <style>
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
   background: #f5f5f5;
 }
 
-/* THIS IS THE REAL FIX */
+/* FULL SCREEN CONTAINER */
 .container {
   position: relative;
-  width: 500px;   /* increase size */
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* background */
+/* BACKGROUND FULL WIDTH */
 .bg {
   width: 100%;
+  height: auto;
   display: block;
 }
 
-/* icons */
+/* ICON STYLE */
 .icon {
   position: absolute;
-  width: 70px;
+  width: 6vw;   /* responsive size */
+  max-width: 80px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -37,15 +39,16 @@ body {
   transform: scale(1.15);
 }
 
-/* BETTER POSITIONS */
-.letter { top: 8%; left: 6%; }
-.card { top: 8%; right: 6%; }
+/* PERFECT POSITIONS (based on your image layout) */
 
-.travel { top: 40%; left: 10%; }
-.music { top: 38%; right: 10%; }
+.letter { top: 10%; left: 8%; }
+.card { top: 10%; right: 8%; }
 
-.ticket { top: 60%; left: 12%; }
-.photostrip { top: 58%; right: 10%; }
+.travel { top: 48%; left: 10%; }
+.music { top: 45%; right: 12%; }
+
+.ticket { top: 70%; left: 14%; }
+.photostrip { top: 65%; right: 10%; }
 
 </style>
 </head>
@@ -55,10 +58,10 @@ body {
 <div class="container">
 
   <!-- BACKGROUND -->
-  <img src="background(2).png" class="bg">
+  <img src="background (2).png" class="bg">
 
   <!-- ICONS -->
-  <a href="letter.html"><img src="letter.png" class="icon letter"></a>
+  <a href="letter.html"><img src="letters.png" class="icon letter"></a>
   <a href="pass.html"><img src="card.png" class="icon card"></a>
 
   <a href="travel.html"><img src="travel.png" class="icon travel"></a>
