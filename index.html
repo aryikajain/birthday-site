@@ -13,36 +13,39 @@ body {
   background: #f5f5f5;
 }
 
+/* THIS IS THE REAL FIX */
 .container {
   position: relative;
-  width: 400px;
+  width: 500px;   /* increase size */
 }
 
+/* background */
 .bg {
   width: 100%;
   display: block;
 }
 
+/* icons */
 .icon {
   position: absolute;
-  width: 50px;
+  width: 70px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
-/* PERFECT POSITIONS (NO CENTER IMAGE NOW) */
-.letter { top: 10%; left: 5%; }
-.card { top: 10%; right: 5%; }
+/* BETTER POSITIONS */
+.letter { top: 8%; left: 6%; }
+.card { top: 8%; right: 6%; }
 
-.travel { top: 40%; left: 8%; }
-.music { top: 40%; right: 8%; }
+.travel { top: 40%; left: 10%; }
+.music { top: 38%; right: 10%; }
 
 .ticket { top: 60%; left: 12%; }
-.photostrip { top: 60%; right: 10%; }
+.photostrip { top: 58%; right: 10%; }
 
 </style>
 </head>
