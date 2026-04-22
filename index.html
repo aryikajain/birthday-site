@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-/* ICON BOUNCE */
-.click:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon:hover {
   transform: scale(1.15);
 }
 
-.click::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  box-shadow: 0 0 0 rgba(255,150,150,0.5);
-  animation: pulse 2s infinite;
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translate(-50%, -50%) translateY(0px); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+  100% { transform: translate(-50%, -50%) translateY(0px); }
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255,150,150,0.4); }
-  70% { box-shadow: 0 0 15px 10px rgba(255,150,150,0); }
-  100% { box-shadow: 0 0 0 0 rgba(255,150,150,0); }
-}
-
-/* POSITIONS */
-.letter { top: 25%; left: 12%; width: 80px; height: 80px; animation: bob 4s infinite; }
-.travel { top: 55%; left: 12%; width: 80px; height: 80px; animation: bob 5s infinite; }
-.movies { top: 80%; left: 18%; width: 80px; height: 80px; animation: bob 6s infinite; }
-.music { top: 40%; right: 12%; width: 80px; height: 80px; animation: bob 5s infinite; }
-.photobooth { top: 65%; right: 10%; width: 90px; height: 120px; animation: bob 4s infinite; }
-.pass { top: 25%; right: 15%; width: 80px; height: 80px; animation: bob 6s infinite; }
-
-/* SMALL FLOAT FOR ICONS */
 @keyframes bob {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
+
+/* POSITIONS EXACT LIKE YOUR DESIGN */
+.letter { top: 18%; left: 8%; animation: bob 4s infinite; }
+.travel { top: 55%; left: 10%; animation: bob 5s infinite; }
+.ticket { top: 78%; left: 15%; animation: bob 6s infinite; }
+.music { top: 38%; right: 12%; animation: bob 5s infinite; }
+.card { top: 20%; right: 10%; animation: bob 4s infinite; }
+.photostrip { top: 60%; right: 8%; width: 100px; animation: bob 6s infinite; }
 
 </style>
 </head>
@@ -41,22 +35,21 @@
 
 <div class="wrapper">
 
-  <!-- FULL DESIGN -->
-  <img src="background.png" class="background">
+  <!-- BACKGROUND FULL DESIGN -->
+  <img src="background.png" class="bg">
 
   <!-- CENTER PHOTO -->
-  <img src="your-photo.jpg" class="center-photo">
+  <img src="your-photo.png" class="center">
 
-  <!-- CLICKABLE AREAS -->
-  <a href="letter.html" class="click letter"></a>
-  <a href="travel.html" class="click travel"></a>
-  <a href="movies.html" class="click movies"></a>
-  <a href="music.html" class="click music"></a>
-  <a href="photobooth.html" class="click photobooth"></a>
-  <a href="pass.html" class="click pass"></a>
+  <!-- ICONS -->
+  <a href="letter.html"><img src="letter.png" class="icon letter"></a>
+  <a href="travel.html"><img src="travel.png" class="icon travel"></a>
+  <a href="movies.html"><img src="ticket.png" class="icon ticket"></a>
+  <a href="music.html"><img src="music.png" class="icon music"></a>
+  <a href="pass.html"><img src="card.png" class="icon card"></a>
+  <a href="photobooth.html"><img src="photostrip.png" class="icon photostrip"></a>
 
 </div>
 
 </body>
 </html>
-
