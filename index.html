@@ -8,46 +8,54 @@
 <style>
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
   background: #f5f5f5;
 }
 
-/* FULL SCREEN CONTAINER */
+/* MAIN FRAME (VERY IMPORTANT) */
 .container {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
+  width: 400px;   /* FIXED WIDTH = NO BREAKING */
 }
 
-/* BACKGROUND FULL WIDTH */
+/* BACKGROUND IMAGE */
 .bg {
   width: 100%;
-  height: auto;
   display: block;
+}
+
+/* CENTER PHOTO */
+.center {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  border-radius: 50%;
 }
 
 /* ICON STYLE */
 .icon {
   position: absolute;
-  width: 6vw;   /* responsive size */
-  max-width: 80px;
+  width: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .icon:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
-/* PERFECT POSITIONS (based on your image layout) */
+/* EXACT POSITIONS (NOW WILL WORK PERFECT) */
 
-.letter { top: 10%; left: 8%; }
-.card { top: 10%; right: 8%; }
+.letter { top: 12%; left: 5%; }
+.card { top: 12%; right: 5%; }
 
-.travel { top: 48%; left: 10%; }
-.music { top: 45%; right: 12%; }
+.travel { top: 45%; left: 8%; }
+.music { top: 45%; right: 8%; }
 
-.ticket { top: 70%; left: 14%; }
+.ticket { top: 65%; left: 12%; }
 .photostrip { top: 65%; right: 10%; }
 
 </style>
@@ -58,10 +66,13 @@ body {
 <div class="container">
 
   <!-- BACKGROUND -->
-  <img src="background(2).png" class="bg">
+  <img src="background.png" class="bg">
+
+  <!-- CENTER -->
+  <img src="background(2).png" class="center">
 
   <!-- ICONS -->
-  <a href="letter.html"><img src="letters.png" class="icon letter"></a>
+  <a href="letters.html"><img src="letters.png" class="icon letter"></a>
   <a href="pass.html"><img src="card.png" class="icon card"></a>
 
   <a href="travel.html"><img src="travel.png" class="icon travel"></a>
